@@ -85,6 +85,9 @@
 % defines one's email
 % usage: \email{<email>}
 \newcommand{\email}[1]{\faEnvelope\ \href{mailto:#1}{#1}}
+% defines one's address
+% usage: \addr{<address>}
+\newcommand{\addr}[1]{\faHome\ {#1}}
 % defines one's phone
 % usage: \phone{<phone>}
 \newcommand{\phone}[1]{\faPhone\ {#1}}
