@@ -1,88 +1,77 @@
-% !TEX program = xelatex
+\documentclass[11pt,a4paper,sans]{moderncv}
 
-\documentclass{resume}
-%\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{amsmath}
+
+% moderncv themes
+\moderncvstyle{banking}
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{rgb}{0.95,0.20,0.20}% red
+\definecolor{color2}{rgb}{0.0,0.0,0.0}% dark grey
+
+\usepackage[scale=0.71]{geometry}
+%\usepackage{geometry}
+\AfterPreamble{\hypersetup{
+  pdfauthor={Zizhong Zhang},
+  pdftitle={CV for Zizhong Zhang},
+  pdfsubject={Detailed CV for Zizhong Zhang},
+  urlcolor=black,
+}}
+% personal data
+\firstname{Zizhong}
+\familyname{Zhang}
+%\title{Resume title (optional)}
+\mobile{+852~9541~7753}
+%\phone{+2~(345)~678~901}
+%\fax{+3~(456)~789~012}
+\email{zhangzizhong0828@gmail.com}
+\address{38/F, Hysan Place, 500 Hennessy Road, Hong Kong}
+%\photo[64pt][0.4pt]{picture}
+%\quote{Some quote (optional)}
 
 \begin{document}
-\pagenumbering{gobble} % suppress displaying page number
 
-\name{Yu Gu}
+\makecvtitle
 
-\basicInfo{
-  \addr{Sunnyvale 94086} \textperiodcentered\
-  \email{grain1101@gmail.com} \textperiodcentered\
-  \phone{(+1) 669-246-8478} \textperiodcentered\
-  \linkedin[Yu Gu]{https://www.linkedin.com/in/yu-gu-2978b0102/}}
 
-\section{\faCogs\ Skills}
-\begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C++, C\#, Java, Javascript, PowerShell, Linux shell
-  \item Environment: Windows, Unix/Linux
-  \item Experienced: Web services, Networking, Enterprise Software(Office 365)
-\end{itemize}
+\section{Skills}
+    \begin{itemize}
+		\item Good at algorithm design, analysis and implementation
+		\item Rich experience with development web services in C++, Python,
+        \item Rich experience with development and maintenance in large, distributed scalable systems
+        \item Rich experience with Linux Shell, GDB and other Linux development tools
+    \end{itemize}
 
-\section{\faUsers\ Experience}
-\datedsubsection{\textbf{Linkedin Corp.} Mountain View, CA}{2017.09 -- present}
-\role{Software Engineer} {}
-Web dev in China Growth Team, building web features and App features to increasing matrics of China users.
+\section{Experience}
+\cventry{Jul. 2015--Present}{Software Engineer}{\textsf{Linkedin Hong Kong}}{}{}{
 \begin{itemize}
-\item Using play + amber.js.
+    \item Development on Apache Traffic Server and contributed to Open Source community
+    \item Rework on libraries to improve code quality and maintenance of Apache Traffic Server plug-ins
 \end{itemize}
+}
 
-\datedsubsection{\textbf{Microsoft Corp.} Suzhou, China}{2015.07 -- 2016.11}
-\role{Software Engineer} {}
-Backend software engineer working at Microsoft SharePoint team. Project experiences are Project SharePoint Hybrid Taxonomy and Project ODB Cross-Geo Data Move.
+\cventry{Jun. 2013--Jun. 2015}{Senior Software Engineer}{Baidu Inc.}{}{}{
+    \begin{itemize}
+        \item Baidu Image Team developed an image web site on which users can browse pictures by categories and tags. My works includes importing new structured data into MySQL/Redis, formatting data into indexes, reading the indexes/Redis/MySQL and outputting to the frontend pages
+	\end{itemize}
+}
+
+\cventry{Nov. 2011--Jun. 2013}{Software Engineer}{Renren Inc.}{}{}{
+    \begin{itemize}
+        \item Feed team is a core team responsible for generation, transmission, storage rendering of feed, processing requests from users and almost all other teams.
+        \item  Developed and maintained distributed web services were managed by ICE, processing millions of requests per second.
+	\end{itemize}
+}
+
+\section{Education}
+\cventry{Sep. 2008--Jul. 2012}{Bachelor of Computer Science, GPA (4.11/5.00), Rank (1/150)}{Northeast Normal University}{}{}{}
+
+\section{Awards \& Scholarships}
 \begin{itemize}
-\item Developing languages include C\#, Powershell.
-\item Platforms include Cosmos, SQL Server, Azure, etc.
+    \item National scholarships, 2009
+    \item Bao Gang Education Scholarship, 2011
+    \item ACM-ICPC Asia China Northeast Contest, Gold Medal, 2010
+    \item ACM-ICPC Asia Regional Contest Harbin Site, Bronze Medal, 2010
+    \item ACM-ICPC Asia Regional Contest Dalian Site, Bronze Medal, 2011
 \end{itemize}
 
-\datedsubsection{\textbf{Project SharePoint Hybrid Taxonomy}}{2015.07 -- 2016.04}
-\role{C\#, Cosmos, CSOM, SQL, Restful-like, timer jobs}{ }
-Hybrid Taxonomy replicates the metadata groups that are mastered in SharePoint Online to on-premises periodically
-while keeping the on-premises copies Read Only.
-\begin{itemize}
-  \item Tree-structured metadata migration. performance analysis.
-\end{itemize}
-
-\datedsubsection{\textbf{Project SharePoint Online MultiGeo}}{2016.04 -- 2016.11}
-\role{C\#, Cmdlets, NoSQL, SharePoint-Online, OneDrive for Business, Azure} { }
-MultiGeo project changes the basic infrastructure of SPO and implements data move for ODB and tenant data.
-\begin{itemize}
-  \item Background workflow includes backing up, uploading to Azure, downloading, restoring and cleanup.
-\end{itemize}
-
-\section{\faUsers\ Internship}
-\datedsubsection{\textbf{Baidu Inc.} Beijing, China}{2014.12 -- 2015.02}
-\role{Frontend Deverloper Intern}{}
-Internship in Baidu Image team. Developed a user feedback web application.
-\begin{itemize}
-\item Developing languages including Javascript, JQuery, HTML/CSS
-\end{itemize}
-
-\section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Northeast Normal University(NENU)}, ChangChun, Jilin, China}{2012 -- 2015}
-\textit{M.S.} in Computer Science(CS)
-\datedsubsection{\textbf{Northeast Normal University(NENU)}, ChangChun, Jilin, China}{2008 -- 2012}
-\textit{B.S.} in Computer Science(CS)
-
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
-
-
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item GitHub: https://github.com/grain1101
-  \item Languages: English - Fluent, Mandarin - Native speaker
-\end{itemize}
-
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
 \end{document}
